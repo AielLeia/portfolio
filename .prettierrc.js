@@ -17,6 +17,7 @@ const config = {
     'hooks/',
     'providers/',
     'components/',
+    'public/',
   ],
   importOrderSeparation: true,
 };
