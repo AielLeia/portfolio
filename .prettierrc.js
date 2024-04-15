@@ -16,6 +16,7 @@ const config = {
     'store/',
     'hooks/',
     'providers/',
+    'context/',
     'components/',
     'public/',
   ],
