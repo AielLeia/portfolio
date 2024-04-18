@@ -9,8 +9,11 @@ import { HiDownload } from 'react-icons/hi';
 
 import { useSectionInView } from '@/lib/hooks';
 
+import { useActiveSection } from '@/context/active-section-context';
+
 const Intro = () => {
   const { ref } = useSectionInView({ sectionName: 'Home', threshold: 0.5 });
+  const { setActiveSection, setTimeOfLastClick } = useActiveSection();
 
   return (
     <section
@@ -70,8 +73,12 @@ const Intro = () => {
         className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium"
       >
         <Link
-          href="#about"
+          href="#contact"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          onClick={() => {
+            setActiveSection('Contact');
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me here{' '}
           <BsArrowRight className="opacity-60 group-hover:translate-x-1 transition-all" />
