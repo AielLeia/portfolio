@@ -12,7 +12,7 @@ const Projects = () => {
   const { ref } = useSectionInView({ sectionName: 'Projects', threshold: 0.5 });
 
   return (
-    <section id="projects" className="scroll-mt-28" ref={ref}>
+    <section id="projects" className="scroll-mt-28 mb-28 sm:mb-40" ref={ref}>
       <SectionHeading>My projects</SectionHeading>
       <div>
         {projectsData.map((project, index) => (

@@ -7,12 +7,12 @@ import { useActiveSection } from '@/context/active-section-context';
 
 type UseSectionInViewType = {
   sectionName: SectionName;
-  threshold: number;
+  threshold?: number;
 };
 
 export function useSectionInView({
   sectionName,
-  threshold,
+  threshold = 0.75,
 }: UseSectionInViewType) {
   const { ref, inView } = useInView({ threshold });
   const { setActiveSection, timeOfLastClick } = useActiveSection();
